@@ -1,0 +1,26 @@
+{% extends 'countdown_app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container text-center pt-4">
+    <div class="row">
+        <div class="col-4">Hours <input type="number" id="hours" placeholder="Hours" value="0" /></div>
+        <div class="col-4">Minutes <input type="number" id="minutes" placeholder="Minutes" value="1" /></div>
+        <div class="col-4">Seconds <input type="number" id="seconds" placeholder="Seconds" value="0" /></div>
+    </div>  
+</div>
+<div class="container text-center pt-4">
+    <div class="row">
+        <div class="col"><button onclick="startCountdown()">Start Countdown</button></div>
+    </div>
+</div>  
+
+<div class="container text-center pt-4">
+    <div class="countdown" id="countdown"></div>
+</div>
+
+    
+    
+    
+
+<script src="{% static 'countdown.js' %}"></script>
+{% endblock content %}
